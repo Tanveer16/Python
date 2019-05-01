@@ -1,0 +1,9 @@
+# demand: What is your forecasted demand - 1300 crates per year
+# setup_cost: Amount payed to supplier for every shipment(purchasing,transport,etc - 95 $/order
+# unit_cost: Unit cost at which you bought it - 6 $/unit
+# holding_cost: amount payed for holding the inventory - 10 $/$/year
+
+# Quick function to calculate optimal / economic order quantity
+
+def eoq(demand,setup_cost, unit_cost,holding_cost):
+    return ((2*demand*setup_cost)/(unit_cost*holding_cost))**0.5
